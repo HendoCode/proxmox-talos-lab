@@ -1,12 +1,12 @@
 # Management VM Outputs
-output "management_vm" {
-  description = "Management VM information"
-  value = {
-    name       = module.management_vm.vm_name
-    ip_address = module.management_vm.vm_ipv4_address
-    ssh_command = module.management_vm.ssh_connection
-  }
-}
+# output "management_vm" {
+#   description = "Management VM information"
+#   value = {
+#     name       = module.management_vm.vm_name
+#     ip_address = module.management_vm.vm_ipv4_address
+#     ssh_command = module.management_vm.ssh_connection
+#   }
+# }
 
 # Control Plane Outputs
 output "control_plane_nodes" {
@@ -22,7 +22,7 @@ output "control_plane_nodes" {
 
 # Worker Node Outputs
 output "worker_nodes" {
-  description = "Worker node information" 
+  description = "Worker node information"
   value = {
     for i, node in module.worker_nodes : node.vm_name => {
       vm_id     = node.vm_id

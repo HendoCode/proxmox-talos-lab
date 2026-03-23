@@ -1,18 +1,18 @@
 # Management VM
-module "management_vm" {
-  source = "../../modules/ubuntu-cloud-init-vm"
+# module "management_vm" {
+#   source = "../../modules/ubuntu-cloud-init-vm"
 
-  vm_name           = "cluster-mgmt"
-  target_node       = var.target_node
-  template_name     = var.ubuntu_template
-  memory            = var.management_vm_memory
-  cores             = var.management_vm_cores
-  ip_address        = var.management_ip
-  gateway_ip        = var.gateway_ip
-  network_bridge    = var.network_bridge
-  cloud_init_snippet = "management-vm-cloud-init.yml"
-  disk_storage      = var.disk_storage
-}
+#   vm_name           = "cluster-mgmt"
+#   target_node       = var.target_node
+#   template_name     = var.ubuntu_template
+#   memory            = var.management_vm_memory
+#   cores             = var.management_vm_cores
+#   ip_address        = var.management_ip
+#   gateway_ip        = var.gateway_ip
+#   network_bridge    = var.network_bridge
+#   cloud_init_snippet = "management-vm-cloud-init.yml"
+#   disk_storage      = var.disk_storage
+# }
 
 # Control Plane Nodes
 module "control_plane_nodes" {

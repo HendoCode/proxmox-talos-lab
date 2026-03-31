@@ -21,7 +21,7 @@ resource "proxmox_vm_qemu" "talos_node" {
   disk {
     slot = "ide2"
     type = "cdrom"
-    iso  = "local:iso/metal-amd64.iso"
+    iso  = "local:iso/talos-qemu-metal-amd64_1.12.6.iso"
   }
 
   # Storage Configuration
@@ -39,7 +39,7 @@ resource "proxmox_vm_qemu" "talos_node" {
   ciuser             = "talos"
   memory             = var.memory
   scsihw             = "virtio-scsi-pci"
-  agent              = 0
+  agent              = 1
   start_at_node_boot = true
 
   # CPU Configuration

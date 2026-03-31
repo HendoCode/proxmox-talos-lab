@@ -17,4 +17,3 @@ output "ssh_connection" {
   description = "SSH connection command"
   value       = "ssh ${var.vm_name}@${var.ip_address}"
 }
-

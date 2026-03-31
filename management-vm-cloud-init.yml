@@ -1,4 +1,5 @@
 #cloud-config
+# Note: this 'magic string' one this first line is necessary for the cloud-init to work.
 users:
   - name: stephen
     sudo: ALL=(ALL) NOPASSWD:ALL

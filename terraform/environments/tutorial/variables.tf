@@ -68,7 +68,7 @@ variable "management_vm_cores" {
 variable "controlplane_memory" {
   type        = number
   description = "Memory for control plane nodes in MB"
-  default     = 4096
+  default     = 2048
 }
 
 variable "controlplane_cores" {
@@ -80,7 +80,7 @@ variable "controlplane_cores" {
 variable "worker_memory" {
   type        = number
   description = "Memory for worker nodes in MB"
-  default     = 8192
+  default     = 4096
 }
 
 variable "worker_cores" {
